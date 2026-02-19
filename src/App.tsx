@@ -9,6 +9,7 @@ import { useImageCompression } from '@/hooks/useImageCompression';
 import type { CompressionConfig } from './types/CompressionTypes';
 import { ThemeProvider } from '@/components/theme-provider';
 import { ModeToggle } from '@/components/mode-toggle';
+import { Analytics } from '@vercel/analytics/react';
 
 import { Zap } from 'lucide-react';
 
@@ -72,6 +73,7 @@ function App() {
 
 	return (
 		<ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+			<Analytics />
 			<div className="min-h-screen bg-background text-foreground p-4 md:p-8 font-sans selection:bg-primary/20">
 				<div className="max-w-3xl mx-auto space-y-8">
 					{/* Header */}
