@@ -4,7 +4,7 @@ import { Progress } from '@/components/ui/progress';
 import { Card } from '@/components/ui/card';
 import { CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import { cn, formatBytes } from '@/lib/utils';
-import type { CompressionLog } from '@/hooks/useImageCompression';
+import type { CompressionLog } from '@/types/CompressionTypes';
 
 interface ProgressLogProps {
 	progress: number;
