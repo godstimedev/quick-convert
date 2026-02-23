@@ -128,7 +128,7 @@ function App() {
 									onDownload={generateAndDownloadZip}
 									onReset={handleReset}
 								/>
-								<div className="opacity-50 pointer-events-none grayscale">
+								<div className="opacity-50 grayscale max-h-100 overflow-y-auto">
 									<ProgressLog progress={100} logs={logs} isCompressing={false} />
 								</div>
 							</div>

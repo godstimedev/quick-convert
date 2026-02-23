@@ -26,7 +26,7 @@ export function ProgressLog({ progress, logs, isCompressing }: ProgressLogProps)
 	}, [logs]);
 
 	return (
-		<Card className="flex flex-col h-[400px] overflow-hidden border-muted">
+		<Card className="flex flex-col h-100 overflow-hidden border-muted">
 			{/* Header & Progress Bar */}
 			<div className="p-4 border-b bg-muted/30 space-y-4">
 				<div className="flex justify-between items-center">
@@ -46,7 +46,10 @@ export function ProgressLog({ progress, logs, isCompressing }: ProgressLogProps)
 			</div>
 
 			{/* Terminal Log Area */}
-			<ScrollArea className="flex-1 p-4 bg-black/5 dark:bg-black/20 font-mono text-xs" ref={scrollRef}>
+			<ScrollArea
+				className="flex-1 min-h-0 p-4 bg-black/5 dark:bg-black/20 font-mono text-xs"
+				ref={scrollRef}
+			>
 				<div className="space-y-1.5">
 					{logs.length === 0 && (
 						<div className="text-muted-foreground italic p-2 text-center">Ready to process...</div>
